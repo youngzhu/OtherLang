@@ -1,4 +1,0 @@
-OtherLang
-=========
-
-Other Language
