@@ -1,8 +1,8 @@
-1¡¢for Ñ­»·
+ï»¿1ã€for å¾ªç¯
 for v_obj in v_list:
 	statements...
 	
-2¡¢while
+2ã€while
 count=0
 while count < MAX_COUNT:
 	statements...

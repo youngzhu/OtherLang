@@ -1,4 +1,4 @@
-# -*- coding: utf-8 -*-
+# -*- coding: gbk -*-
 """ 递归调用
 """
 def print_lol(the_list):
