@@ -31,11 +31,7 @@
 
 			extend()
 
-		> 例如，names.extend(['Lily','Tom'])
-		> 
-		> **当然，也可以叠加自身**
-		>
-		> 例如，names.extend(names)
+	
 		
 5. 删除元素
 
