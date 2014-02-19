@@ -19,22 +19,6 @@
 			append(obj)
 		>例如，names.append('xiaoming')
 
-	+ 在指定的位置增加一个数据项
-	
-			insert(i, obj)
-		> 例如，names.insert(0, 'xiaohong')
-		> 
-		> 注：如果，i大于列表的长度，相当于调用append()方法，即在列表的末尾增加一个数据项
-
-	+ 在列表的末尾增加一个数据项集合
-
-			extend()
-
-		> 例如，names.extend(['Lily','Tom'])
-		> 
-		> **当然，也可以叠加自身**
-		>
-		> 例如，names.extend(names)
 
 		
 5. 删除元素
