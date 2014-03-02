@@ -1,0 +1,34 @@
+﻿Linux 用户组，用户及文件的访问权限详解 
+
+添加组
+groupadd 组名
+
+查看所有组信息
+cat /etc/group
+
+组名:x:groupID:
+
+添加用户
+useradd -g 组名 用户名
+
+查看所有用户信息
+cat /etc/passwd
+
+用户名:加密信息（密码）:用户ID:用户组ID:注释:用户主目录:shell
+
+设置密码
+pass 用户名
+
+修改用户组
+usermod -g 组名 用户名
+
+将文件改组
+chgrp 组名 文件名
+
+将该文件夹及其子目录下的所有文件改变所有者
+chown -R 用户名 文件夹
+
+- 文件
+d 目录
+l 链接
+
