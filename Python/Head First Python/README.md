@@ -1,0 +1,1 @@
+书中提到的资源 [下载地址](http://python.itcarlow.ie/resources.html)
