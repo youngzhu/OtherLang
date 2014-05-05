@@ -15,3 +15,4 @@ class Sighting(db.Model):
     whale_type = db.StringProperty(choices=_WHALES)
     blow_type = db.StringProperty(choices=_BLOWS)
     wave_type =  db.StringProperty(choices=_WAVES)
+    which_user = db.UserProperty()
