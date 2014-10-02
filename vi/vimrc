@@ -1,0 +1,13 @@
+""###########################
+""# vim 的配置文件，"" 表示注释
+""# 不同系统文件名不一样，路径是一样的，都在 $HOME 下
+""# Windows 下，_vimrc
+""# Xnix 下，.vimrc
+""###########################
+
+""# 显示行号
+set number
+""# 将Tab键改为4个空格，默认为 8 位
+set shiftwidth=4 softtabstop=4 expandtab
+""# 历史记录的条数，默认为 20 
+set history=200
