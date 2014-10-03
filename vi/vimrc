@@ -11,3 +11,9 @@ set number
 set shiftwidth=4 softtabstop=4 expandtab
 ""# 历史记录的条数，默认为 20 
 set history=200
+
+"" 查找的字符串可以即时显示出来，否则需要按回车才能显示
+set incsearch
+
+"" 高亮与查找字符串匹配的字符
+set hlsearch
