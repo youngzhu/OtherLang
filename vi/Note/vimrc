@@ -1,0 +1,25 @@
+﻿"" 显示行数
+set number
+
+"" 高亮搜索匹配的内容
+set hlsearch
+
+"" 查找时，即时匹配
+set incsearch
+
+"" 设置历史记录数
+set history=500
+
+"" 换行时，单词不会被拆分
+set linebreak
+
+"" 删除空行
+map idb :g/^s*$/d
+
+"" 在文字的前后加上 , for markdown **
+map <F6> i**<Esc>ea**<Esc>
+
+"" 保留文件编辑之前的一个副本
+"""" 注意，如果副本文件确定不要了，要删除。否则这个副本的内容不会变。
+:set patchmode=.orig
+
