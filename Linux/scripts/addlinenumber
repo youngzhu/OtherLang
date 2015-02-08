@@ -1,0 +1,4 @@
+#!/bin/bash
+# add line-number for each line
+
+sed '=' $1 | sed 'N; s/\n/. /'
