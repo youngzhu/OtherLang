@@ -3,7 +3,15 @@
 # Find Top 10 big disk space users in various directories
 ###########################################################
 # Parameters for Script
-CHECK_DIRECTORIES="/var/log /home/young" #directories to check
+# echo $1
+# 如果后面跟了参数（指定的目录），就统计对应的目录；
+# 否则，统计默认的目录
+if [ -n "$1" ]
+then
+	CHECK_DIRECTORIES="$1" 
+else
+	CHECK_DIRECTORIES="/var/log /home/young" #directories to check
+fi
 
 ############## Main Script ################################
 DATE=$(date '+%m%d%y') # Date for report file
