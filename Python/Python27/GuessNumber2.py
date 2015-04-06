@@ -1,4 +1,4 @@
-# -*- coding: cp936 -*-
+# -*- coding: gbk -*-
 from random import randint
 
 name = raw_input('ÇëÊäÈëÄúµÄĞÕÃû£º')

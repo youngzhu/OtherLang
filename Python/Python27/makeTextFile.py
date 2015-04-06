@@ -26,7 +26,7 @@ while True:
 	all.append(entry)
 
 # write lines to file with proper line-ending
-fobj = (fname, 'w')
+fobj =open(fname, 'w')
 fobj.writelines(['%s%s' % (x, ls) for x in all])
 fobj.close()
 print 'DONE!!'
