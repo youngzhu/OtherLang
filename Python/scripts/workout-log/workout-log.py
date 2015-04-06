@@ -29,14 +29,15 @@ if os.path.exists(file_name_daily) :
 else :
     # 文件不存在
     print '文件不存在！'
-    answer=raw_input('确定创建文件吗？（Y|n）')
+    answer=raw_input('确定创建文件吗？（Y|n）'.decode('utf-8').encode('gbk'))
     if answer == 'Y' :
         # 创建文件
         f=open(file_name_daily, 'w')
         f.close()
 
 # 输入当天的数据
-data_today=raw_input('请按以下顺序输入数字，用逗号 `,` 隔开，按回车键结束\n（深蹲, 俯卧撑, 仰卧起坐, 平板支撑（一）, 平板支撑（二））：\n')
+print('请按以下顺序输入数字，用逗号 `,` 隔开，按回车键结束\n'.decode('utf-8').encode('gbk'))
+data_today=raw_input('（深蹲, 俯卧撑, 仰卧起坐, 平板支撑（一）, 平板支撑（二））：\n'.decode('utf-8').encode('gbk'))
 #print data_today
 
 list_today=data_today.split(',')
@@ -57,10 +58,10 @@ records=[] # 将要写入文件的内容（记录）
 # 获取当前时间
 v_now=time.strftime('%Y-%m-%d %X', time.localtime())
 records.append(v_now + '\n')
-records.append('深蹲 ' + v_squat + '/' + str(v_squat_sum) + '\n')
-records.append('俯卧撑 ' + v_push_up + '/' + str(v_push_up_sum) + '\n')
-records.append('仰卧起坐 ' + v_sit_up + '/' + str(v_sit_up_sum) + '\n')
-records.append('平板支撑 ' + v_plank_1 + '-' + v_plank_2 + '/' + str(v_plank_sum) + '\n')
+records.append('深蹲 '.decode('utf-8').encode('gbk') + v_squat + '/' + str(v_squat_sum) + '\n')
+records.append('俯卧撑 '.decode('utf-8').encode('gbk') + v_push_up + '/' + str(v_push_up_sum) + '\n')
+records.append('仰卧起坐 '.decode('utf-8').encode('gbk') + v_sit_up + '/' + str(v_sit_up_sum) + '\n')
+records.append('平板支撑 '.decode('utf-8').encode('gbk') + v_plank_1 + '-' + v_plank_2 + '/' + str(v_plank_sum) + '\n')
 
 records.extend('\n')
 records.extend(file_content)
