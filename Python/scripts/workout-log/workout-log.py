@@ -30,7 +30,8 @@ if os.path.exists(file_name_daily) :
 else :
     # 文件不存在
     print u'文件不存在！'
-    answer=raw_input(u'确定创建文件吗？（Y|n）')
+    print u'确定创建文件吗？（Y|n）'
+    answer=raw_input()
     if answer == 'Y' :
         # 创建文件
         f=open(file_name_daily, 'w')
