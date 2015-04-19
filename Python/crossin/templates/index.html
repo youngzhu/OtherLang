@@ -1,0 +1,8 @@
+$def with(movies)
+
+<h1>Crossin's Movie Site</h1>
+
+$for m in movies:
+    <li>
+    $m['title'], $m['year'], $m['country'], $m['abstract']
+    </li>
