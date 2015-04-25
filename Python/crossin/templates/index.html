@@ -1,8 +1,13 @@
 $def with(movies)
 
+<h4>欢迎来到</h4>
 <h1>Crossin's Movie Site</h1>
+
+<hr>
+
+<p>影片列表：</p>
 
 $for m in movies:
     <li>
-    $m['title'], $m['year'], $m['country'], $m['abstract']
+    <a href="movie/$m['id']">$m['title']</a>
     </li>
