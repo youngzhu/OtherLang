@@ -136,16 +136,18 @@ if last_day :
     v_length=len(records)
     index=0
     while index < v_length:
-        #print records[index] 
+        #print str(records[index])[:10] + '---' + str(records[index])
+        #print year_and_mon + '--' + (str(records[index])[:7])
         if year_and_mon == (str(records[index])[:7]):
             v_counter+=1
             #print v_counter
+            #print str(index) + '--' + str(v_length)
             index += 6 # 跳过锻炼的数据，只看时间数据
-            #print str(index) + '--' + str(v_length) 
         else:
+            #print str(index)
             break
     # 写入文件
     file_obj=open(file_name_monthly, 'a')
     file_obj.write(time.strftime('%B', time.localtime())+ '\n')
-    file_obj.write('\tDAYS: ' + str(v_counter) + '\n')
+    file_obj.write('\tDAYS: ' + str(v_counter) + '/' + str(days_of_mon) + '\n')
     file_obj.close()
