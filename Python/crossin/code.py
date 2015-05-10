@@ -1,3 +1,4 @@
+# _*- coding: utf-8 -*-
 import web
 
 urls=(
@@ -18,6 +19,13 @@ class movie:
 
 class index:
     def GET(self):
+        return render.index(movies)
+
+    def POST(self):
+        data=web.input()
+        # r'' 为了防止python对 % 进行转义
+        condition=r'title like "%' + data.title + r'%"'
+        movies=db.select('movie', where=condition)
         return render.index(movies)
 
 if __name__ == "__main__":
