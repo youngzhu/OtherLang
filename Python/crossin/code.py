@@ -3,7 +3,8 @@ import web
 
 urls=(
 '/','index',
-'/movie/(\d+)', 'movie'
+'/movie/(\d+)', 'movie',
+'/cast/(.*)', 'cast',
 )
 
 db=web.database(dbn='sqlite',db='MovieSite.db')
@@ -25,6 +26,12 @@ class index:
         data=web.input()
         # r'' 为了防止python对 % 进行转义
         condition=r'title like "%' + data.title + r'%"'
+        movies=db.select('movie', where=condition)
+        return render.index(movies)
+
+class cast:
+    def GET(self, cast_name):
+        condition=r'casts like "%' + cast_name + r'%"'
         movies=db.select('movie', where=condition)
         return render.index(movies)
 

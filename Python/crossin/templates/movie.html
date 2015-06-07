@@ -7,4 +7,10 @@ $def with(movie)
 <p><img src="/static/poster/$(movie.id).jpg"></p>
 <p>年代：$movie.year</p>
 <p>国家：$movie.countries</p>
+$ casts=movie.casts.split(',')
+<p>主演：
+$for cast in casts:
+    <a href="/cast/$cast">$cast</a>
+    <br>
+</p>
 <p>$movie.summary</p>
